@@ -1,1 +1,1 @@
-require_relative '../../../projects/ruby_ios/appium/run'
+require_relative '../../../projects/ruby_android/appium/run'

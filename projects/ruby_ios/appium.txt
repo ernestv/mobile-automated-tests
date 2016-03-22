@@ -2,7 +2,7 @@
 appium-version = "1.1.0"
 platformName = "iOS"
 platformVersion = "9.2"
-deviceName = "iPhone 5s"
+deviceName = "iPhone 6"
 app = "./UICatalog6.1.app.zip"
 name = "Ruby iOS Tutorial"
 

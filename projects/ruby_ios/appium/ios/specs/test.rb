@@ -9,7 +9,7 @@ describe 'spec home, buttons, and controls' do
     capabilities.setCapability(CapabilityType.BROWSER_NAME, "Browser");
     capabilities.setCapability("platformVersion", "5.0.1");
 #    capabilities.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, "true");
-    driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+    driver = new AndroidDriver<WebElement>(new URL("www.rhapsody.com"), capabilities);
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     driver.get("http://www.google.com");
   end

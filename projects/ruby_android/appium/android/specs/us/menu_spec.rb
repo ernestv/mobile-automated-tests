@@ -1,11 +1,11 @@
 require 'rubygems'
 require 'appium_lib'
-require 'rake'
 
+require 'appium_lib'
+#require_relative '../pages/home'
+#require_relative '../pages/inner_screen'
 
-describe "MENU" do
-
-#  it "Menu" do
+  describe "Menu" do
       
       
   desired_caps = {
@@ -24,18 +24,29 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://www.rhapsody.com")
 #sleep(10)
 
-#  element = find_element(:id, 'home-2016')
-#  element = find_element(:class, 'social')
+  element = find_element(:id, 'home-2016')
+  element = find_element(:class, 'social')
 #  element = find_element(:class, 'left-off-canvas-toggle')
+  element.click
+  sleep(5)
+
+element = find_element(:class, 'main-list')
+  element.click
+  sleep(5)
+  
+  element = find_element(:id, 'pricing')
+  element = find_element(:class, 'social-holder')
+  element.click
+  sleep(5)
+
+#  element = find_element(:class, 'close')
 #  element.click
 #  sleep(5)
 
-#@selenium.click
-#@selenium.open "http://www.rhapsody.com"
-@element.click "Start listening now 3"
-@selenium.wait_for_page_to_load "30000"
+#wait = Selenium::WebDriver::Wait.new :timeout => 10
 
 driver_quit
 
     end
 #	end
+ #end
