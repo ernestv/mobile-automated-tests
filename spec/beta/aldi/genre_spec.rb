@@ -4,7 +4,7 @@ require 'appium_lib'
 
 describe "ALDI" do
 
-it 'Pop' do
+it 'Genre' do
   
  desired_caps = {
    caps:  {
@@ -25,18 +25,17 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://www-beta.lifestore-flat.de/")
 sleep(5)
 
-#  element = find_element(:id, 'browse-genres')
-#  element = find_element(:class, 'tag-button')
-#  element.click
-#  sleep(3)
 
-element = find_element(:link_text, 'Jazz')
+element = find_element(:link_text, 'Entdecken')
+element.click
+sleep(5)
+
+element = find_element(:link_text, 'Pop')
 element.click
 sleep(5)
 
 #wait = Selenium::WebDriver::Wait.new :timeout => 10
-@driver.find_element(:class, 'genre-blurb').displayed?
-@driver.find_element(:id, 'subgenres').displayed?
+@driver.find_element(:id, 'genre-page').displayed?
 @driver.find_element(:id, 'top-tracks').displayed?
 @driver.find_element(:id, 'new-releases').displayed?
 @driver.find_element(:id, 'popular-artists').displayed?

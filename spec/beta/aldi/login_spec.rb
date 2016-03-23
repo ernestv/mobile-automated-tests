@@ -4,7 +4,7 @@ require 'appium_lib'
 
 describe "ALDI" do
 
-it 'Cta' do
+it 'Login' do
   
  desired_caps = {
    caps:  {
@@ -25,12 +25,12 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://www-beta.lifestore-flat.de/")
 sleep(5)
 
-element = find_element(:link_text, 'Start your free trial')
+element = find_element(:link_text, 'Login')
 element.click
 sleep(5)
 
 wait = Selenium::WebDriver::Wait.new :timeout => 5
-@driver.find_element(:class, 'list-unstyled').displayed?
+@driver.find_element(:id, 'ember473').displayed?
 driver_quit
 
 end
