@@ -23,15 +23,14 @@ Appium.promote_appium_methods Object
 
 
 @selenium_driver.get("http://ca-beta.napster.com/music")
-#sleep(10)
+sleep(5)
 
-#element = find_element(:link_text, 'Join now')
 element = find_element(:id, 'nav-freetrial')
 element.click
 sleep(5)
 
 wait = Selenium::WebDriver::Wait.new :timeout => 5
-@driver.find_element(:id, 'pricing').displayed?
+@driver.find_element(:class, 'list-unstyled').displayed?
 driver_quit
 
 end

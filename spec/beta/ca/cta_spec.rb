@@ -25,7 +25,7 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://ca-beta.napster.com/")
 sleep(5)
 
-element = find_element(:link_text, 'Start your free trial')
+element = find_element(:link_text, 'Start listening now')
 element.click
 sleep(5)
 
