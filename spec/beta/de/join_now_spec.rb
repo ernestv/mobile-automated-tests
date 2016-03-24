@@ -4,7 +4,7 @@ require 'appium_lib'
 
 describe "DE" do
 
-it 'Cta' do
+it 'Jetz testen' do
   
  desired_caps = {
    caps:  {
@@ -31,7 +31,7 @@ element.click
 sleep(5)
 
 wait = Selenium::WebDriver::Wait.new :timeout => 5
-@driver.find_element(:id, 'pricing').displayed?
+@driver.find_element(:class, 'list-unstyled').displayed?
 driver_quit
 
 end

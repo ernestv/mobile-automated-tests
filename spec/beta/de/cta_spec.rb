@@ -23,11 +23,27 @@ Appium.promote_appium_methods Object
 
 
 @selenium_driver.get("http://de-beta.napster.com/")
-sleep(5)
+sleep(2)
 
-element = find_element(:link_text, 'Start your free trial')
+element = find_element(:id, 'plans')
+#element = find_element(:class, 'button')
+#element = find_element(:class, 'format_section')
+#element = find_element(:class, 'row')
+#element = find_element(:class, 'center_child')
+element = find_element(:class, 'center_content')
+element = find_element(:link_text, 'Jetzt testen')
+sleep(2)
 element.click
-sleep(5)
+sleep(2)
+
+#element = find_element(:class,'center_content')
+#element = find_element(:class,'button')
+#element.click
+#sleep(5)
+
+#element = find_element(:link_text, 'Jetzt testen')
+#element.click
+#sleep(5)
 
 wait = Selenium::WebDriver::Wait.new :timeout => 5
 @driver.find_element(:class, 'list-unstyled').displayed?

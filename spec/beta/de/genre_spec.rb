@@ -4,7 +4,7 @@ require 'appium_lib'
 
 describe "DE" do
 
-it 'Pop' do
+it 'Genre' do
   
  desired_caps = {
    caps:  {
@@ -35,7 +35,7 @@ element.click
 sleep(5)
 
 #wait = Selenium::WebDriver::Wait.new :timeout => 10
-@driver.find_element(:class, 'genre-blurb').displayed?
+#@driver.find_element(:class, 'genre-blurb').displayed?
 @driver.find_element(:id, 'subgenres').displayed?
 @driver.find_element(:id, 'top-tracks').displayed?
 @driver.find_element(:id, 'new-releases').displayed?

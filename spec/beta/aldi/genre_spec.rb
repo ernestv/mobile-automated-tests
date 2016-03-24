@@ -23,12 +23,15 @@ Appium.promote_appium_methods Object
 
 
 @selenium_driver.get("http://www-beta.lifestore-flat.de/")
-sleep(5)
+sleep(2)
 
-
-element = find_element(:link_text, 'Entdecken')
+element = find_element(:class, 'mobile_menu')
 element.click
-sleep(5)
+sleep(2)
+
+element = find_element(:class,'button')
+element.click
+sleep(2)
 
 element = find_element(:link_text, 'Pop')
 element.click
