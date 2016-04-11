@@ -50,6 +50,9 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
     rubyzip (1.1.7)
     sauce_whisk (0.0.18)
       json (~> 1.8.1)
@@ -81,8 +84,9 @@ DEPENDENCIES
   appium_lib (~> 7.0)
   rake (>= 10.1.1)
   rest-client (>= 1.6.7)
+  rspec-core
   sauce_whisk (>= 0.0.13)
   test_runner (>= 0.9.37)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2

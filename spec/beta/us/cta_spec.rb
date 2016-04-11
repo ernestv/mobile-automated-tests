@@ -25,11 +25,12 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://www.rhapsody.com")
 sleep(5)
 
-element = find_element(:link_text, 'Start your free trial')
+element = find_element(:link_text, 'Start your FREE trial')
 element.click
 sleep(5)
 
-wait = Selenium::WebDriver::Wait.new :timeout => 5
+#wait = Selenium::WebDriver::Wait.new :timeout => 5
+sleep(5)
 @driver.find_element(:class, 'list-unstyled').displayed?
 driver_quit
 

@@ -25,7 +25,8 @@ Appium.promote_appium_methods Object
 @selenium_driver.get("http://www-beta.lifestore-flat.de/")
 sleep(5)
 
-element = find_element(:link_text, 'Login')
+#element = find_element(:class, 'six column tablet_two mobile_two')
+element = find_element(:id, 'footer')
 element.click
 sleep(5)
 

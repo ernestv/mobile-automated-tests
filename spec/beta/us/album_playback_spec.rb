@@ -10,7 +10,7 @@ describe "ALBUM PLAYBACK" do
         platformName:  'Android',
         platformVersion: '5.0.2',
         deviceName:    'G2',
-        browserName:   'Chrome',
+        browserName:   'Internet',
     }
 }
  

@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'appium_lib'
 
-describe "SHARE" do
+describe "EU" do
   
-#  it 'share' do
+  it 'Music' do
 
  desired_caps = {
    caps:  {
@@ -21,16 +21,21 @@ describe "SHARE" do
 Appium.promote_appium_methods Object
 
 @selenium_driver.get("http://fr-beta.napster.com/")
-sleep(10)
+sleep(5)
 
-#  element = find_element(:id, 'home-2016')
-#  element = find_element(:class, 'left-off-canvas-toggle')
-#  element.click
-#  sleep(5)
+element = find_element(:id, 'home-2016')
+element = find_element(:class, 'toggle_menu')
+element.click
+sleep(5)
   
-element = find_element(:class, 'cta-wrapper').click
+element = find_element(:link_text, 'Musique').click
+sleep(40)
+
+#wait = Selenium::WebDriver::Wait.new :timeout => 40
+#@driver.find_element(:class, 'music-headers').displayed?
+@driver.find_element(:class, 'tags').displayed?
 
 driver_quit
 
-#end
+end
 end
